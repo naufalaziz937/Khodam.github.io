@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khodam Generator</title>
+    <style>
+        body {
+            font-family: 'comic sans ms';
+        }
+
+        .form-card {
+            background-color: #00040b;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin: auto;
+            margin-top: 200px;
+        }
+
+        button {
+            background-color: #f35405;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #ffffff;
+        }
+        
+        p {
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-card">
+        <h2>Masukan Nama Anda</h2>
+        <input type="text" id="nameInput" placeholder="Your Name">
+        <button onclick="getRandomAnimal()">Cek khodam</button>
+        <p id="randomAnimal"></p>
+    </div>
+
+    <script>
+        function getRandomAnimal() {
+            var animals = ['Naga Api', 'Alok', 'Masako Ayam', 'Kaldu Jamur', 'Sempak ben 10', 'Nasi katsu', 'Kulkas warung', 'Batagor', 'Hackerman', 'Pak vincent', 'Kanjut paus'];
+            var randomIndex = Math.floor(Math.random() * animals.length);
+            var randomAnimal = animals[randomIndex];
+
+            document.getElementById('randomAnimal').innerText = 'Halo ' + document.getElementById('nameInput').value + ', Khodam anda adalah: ' + randomAnimal + '!';
+        }
+    </script>
+</body>
+
+</html>
